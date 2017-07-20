@@ -1,0 +1,16 @@
+<html>
+<body>
+{% if status %}
+<span class="message">{{ escape(status) }}</span>
+{% end %}
+<form action="/update/{{name}}" method="post">
+  <textarea name="words" rows="30">{{words}}</textarea><br />
+  <input type=submit>
+</form>
+
+<form action="/check/{{name}}" method="post">
+  <textarea name="words" rows="4" cols="100">你就是个tmd坏蛋</textarea><br />
+  <input type=submit>
+</form>
+</body>
+</html>
